@@ -39,7 +39,10 @@ const TaskManager: React.FC = () => {
   }, [dispatch, title]);
 
   return (
-    <div className="container my-5" style={{ height: "100%" }}>
+    <div
+      className="container my-2"
+      style={{ height: "100%", maxWidth: "900px" }}
+    >
       <h3 className="mb-3">Task Manager</h3>
 
       <div className="d-flex mb-3 gap-3">
@@ -76,13 +79,13 @@ const TaskManager: React.FC = () => {
         </div>
       )}
       {error && <p className="text-danger">{error}</p>}
-      <section>
+      <section className="d-flex align-items-center justify-content-center gap-3">
         {" "}
         <div className="task-list ps-sm-0">
           {filteredTasks.map((task) => (
             <li
               key={task.id}
-              className="d-flex justify-content-between align-items-center items"
+              className="d-flex justify-content-between align-items-center items gap-3"
             >
               <div>
                 <input
@@ -99,7 +102,7 @@ const TaskManager: React.FC = () => {
                   {task.title}
                 </span>
               </div>
-              <div className="align-self-start mt-3 mt-md-0">
+              <div className="align-self-start mt-md-0">
                 <Button
                   label="Delete"
                   onClick={() => dispatch(deleteTask(task.id))}
