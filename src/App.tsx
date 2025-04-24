@@ -1,10 +1,16 @@
 import "./App.css";
-import TaskManager from "./Modules/TaskManger";
+import SideBar from "./Modules/SideBar";
+import ManageTask from "./Modules/Task";
 
 function App() {
   return (
-    <section className="container">
-      <TaskManager />
+    <section className="header row m-0">
+      <div className="col-12 col-md-2">
+        <SideBar />
+      </div>
+      <div className="col-12 col-md-10">
+        <ManageTask />
+      </div>
     </section>
   );
 }
