@@ -1,6 +1,6 @@
 import "./App.css";
 import SideBar from "./Modules/SideBar";
-import ManageTask from "./Modules/Task";
+import ManageTask from "./Modules/ManageTask";
 
 function App() {
   return (

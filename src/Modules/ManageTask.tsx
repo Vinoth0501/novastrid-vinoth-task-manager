@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import { Task } from "../types/taskTypes";
@@ -82,6 +82,7 @@ function ManageTask() {
           </div>
         </div>
       )}
+      {error && <p className="text-danger">{error}</p>}
       <div className="row mt-4 data-list">
         {filteredTasks.length > 0 ? (
           filteredTasks.map((task) => (
